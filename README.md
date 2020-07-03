@@ -1,67 +1,98 @@
-# Práctica para curso avanzado de Angular
+# PracticaFinal
 
-## Requerimientos funcionales
+This project was generated using [Nx](https://nx.dev).
 
-Explorar la información abierta y disponible en el [API del Banco Mundial](https://datahelpdesk.worldbank.org/knowledgebase/articles/898581-api-basic-call-structures).
+<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
 
+🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
 
-### Home page
+## Quick Start & Documentation
 
-- Ver regiones geográficas continentales:
+[Nx Documentation](https://nx.dev/angular)
 
-- A partir de : http://api.worldbank.org/v2/region/?format=json
+[10-minute video showing all Nx features](https://nx.dev/angular/getting-started/what-is-nx)
 
-- Filtrando para ver aquellas que tengan `id` numérico
+[Interactive Tutorial](https://nx.dev/angular/tutorial/01-create-application)
 
-- Navegar hacia la página de una región: `region/:code`
+## Adding capabilities to your workspace
 
-### Página para una región continental
+Nx supports many plugins which add capabilities for developing different types of applications and different tools.
 
-- Ver los datos básicos del continente y los países pertenecientes.
+These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
 
-- A partir de : http://api.worldbank.org/v2/region/ECS/country?per_page=1000&format=json
+Below are our core plugins:
 
-- Navegar hacia la página de un país: `country/:id`
+- [Angular](https://angular.io)
+  - `ng add @nrwl/angular`
+- [React](https://reactjs.org)
+  - `ng add @nrwl/react`
+- Web (no framework frontends)
+  - `ng add @nrwl/web`
+- [Nest](https://nestjs.com)
+  - `ng add @nrwl/nest`
+- [Express](https://expressjs.com)
+  - `ng add @nrwl/express`
+- [Node](https://nodejs.org)
+  - `ng add @nrwl/node`
 
-### Página para un país
+There are also many [community plugins](https://nx.dev/nx-community) you could add.
 
-- Ver los datos básicos de un país
+## Generate an application
 
-- A partir de : http://api.worldbank.org/V2/country/ESP?format=json
+Run `ng g @nrwl/angular:app my-app` to generate an application.
 
-- Navegar hacia su región continental : `region/:code`
+> You can use any of the plugins above to generate applications as well.
 
----
+When using Nx, you can create multiple applications and libraries in the same workspace.
 
-## Requerimientos NO funcionales
+## Generate a library
 
-## Mínimo
+Run `ng g @nrwl/angular:lib my-lib` to generate a library.
 
-- Mono repositorio generado con las herramientas de [Nx.dev](https://nx.dev/angular)
+> You can also use any of the plugins above to generate libraries as well.
 
-- AL menos una aplicación y una librería
+Libraries are sharable across libraries and applications. They can be imported from `@practica-final/mylib`.
 
-- Testing unitario de al menos un componente y un servicio
+## Development server
 
-- Testing _e2e_ de una página
+Run `ng serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
-- Uso de la estrategia de detección de cambios **_OnPush_**.
+## Code scaffolding
 
-- Uso del patrón _Container Presenter_.
+Run `ng g component my-component --project=my-app` to generate a new component.
 
-## Plus
+## Build
 
-- Almacén centralizado del estado mediante **_NgRx_**.
+Run `ng build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-- Características **_PWA_**
+## Running unit tests
 
-- Traducible
+Run `ng test my-app` to execute the unit tests via [Jest](https://jestjs.io).
 
-## Extra
+Run `nx affected:test` to execute the unit tests affected by a change.
 
-- Una landing page _SEO friendly_ generada con **_SSR_** que muestre la lista de continentes.
+## Running end-to-end tests
 
-- Un _**WebComponent**_ con datos de un según su código. `<wbde-country id="ESP"></wbde-country>`
+Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
 
-- Una aplicación web estándar (sin Angular) que use el anterior componente.
+Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
 
+## Understand your workspace
+
+Run `nx dep-graph` to see a diagram of the dependencies of your projects.
+
+## Further help
+
+Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
+
+## ☁ Nx Cloud
+
+### Computation Memoization in the Cloud
+
+<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
+
+Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
+
+Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
+
+Visit [Nx Cloud](https://nx.app/) to learn more.

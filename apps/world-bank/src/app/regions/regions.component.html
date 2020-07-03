@@ -1,0 +1,3 @@
+<div *ngIf="regions$ | async as regions">
+  <be-ui-item-list [items]="regions" (itemSelected)="loadDetails($event)"></be-ui-item-list>
+</div>
