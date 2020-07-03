@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@angular/cli": "^10.0.0",
+    "@nrwl/schematics": "^8.12.11"
+  }
+}
